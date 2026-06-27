@@ -81,7 +81,7 @@
         .timeline-content p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* PAGE 4: WORK & CO-CURRICULAR PRODUCED (GRID) */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; width: 100%; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; width: 100%; }
         .portfolio-card { background: var(--bg-secondary); border-radius: 10px; overflow: hidden; border: 1px solid #334155; transition: 0.3s; display: flex; flex-direction: column; }
         .portfolio-card:hover { transform: translateY(-5px); border-color: var(--accent); }
         .portfolio-info { padding: 20px; flex-grow: 1; }
@@ -118,6 +118,7 @@
 </head>
 <body>
 
+    <!-- FIXED NAVIGATION -->
     <nav>
         <a href="#home" class="nav-logo"><i class="fa-solid fa-code"></i> Portfolio.</a>
         <ul class="nav-links">
@@ -130,16 +131,19 @@
         </ul>
     </nav>
 
+    <!-- PAGE 1: HOME SECTION -->
     <section id="home">
         <h1>Welcome to my portfolio,<br><span>Muhammad Danial Bin Rahim.</span></h1>
         <p>Hi, I am a Cybersecurity Student at UTeM. I specialize in designing secure, user-friendly high-fidelity threat monitoring interfaces, identity management systems, and robust freelance web architectures.</p>
         <a href="#work" class="btn-cta">Explore Cyber Projects <i class="fa-solid fa-terminal"></i></a>
     </section>
 
+    <!-- PAGE 2: PERSONAL & CONTACT DETAILS -->
     <section id="about">
         <h2 class="section-title">Personal Details</h2>
         <div class="about-container">
             <div class="profile-card">
+                <!-- Custom Profile Photo -->
                 <img src="IMG-20230730-WA0028.jpg" alt="Muhammad Danial Bin Rahim" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--accent); margin: 0 auto 20px auto; display: block; background-color: #475569;">
                 <h3>Muhammad Danial Bin Rahim</h3>
                 <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">UTeM Cybersecurity Undergraduate</p>
@@ -160,11 +164,13 @@
             <div>
                 <h3 style="margin-bottom: 15px;">Professional Biography</h3>
                 <p style="color: var(--text-muted); margin-bottom: 20px;">I am a highly reliable, adaptive, and goal-oriented cybersecurity undergraduate pursuing my specialized degree at UTeM. I am dedicated to academic excellence and personal growth, demonstrating a proven ability to adjust flexibly to changing technological scenarios and challenging operational environments. Passionate about linking core systems infrastructure with human-centric principles, my objective is to design security ecosystems that are robust against architectural threats while remaining functional and accessible for real-world enterprise deployment.</p>
+                <!-- Linked PDF Packet download anchor link -->
                 <a href="academic-transcript.pdf" download class="btn-cta"><i class="fa-solid fa-download"></i> Download Academic Transcript</a>
             </div>
         </div>
     </section>
 
+    <!-- PAGE 3: ACADEMIC HISTORY -->
     <section id="education">
         <h2 class="section-title">Academic History</h2>
         <div class="timeline">
@@ -194,11 +200,13 @@
         </div>
     </section>
 
+    <!-- PAGE 4: WORK PRODUCED & INVOLVEMENT -->
     <section id="work">
         <h2 class="section-title">Work Produced & Experiences</h2>
         <div class="portfolio-grid">
             <div class="portfolio-card">
-                <img src="WhatsApp Image 2026-06-27 at 14.31.12.jpeg" alt="Stage and Decoration Committee Team" style="width: 100%; height: 180px; object-fit: cover; object-position: center 30%;">
+                <!-- Custom Event Image Link -->
+                <img src="WhatsApp Image 2026-06-27 at 14.31.12.jpeg" alt="Stage and Decoration Committee Team" style="width: 100%; height: 210px; object-fit: cover; object-position: center 30%;">
                 <div class="portfolio-info">
                     <span class="tag">Event Leadership</span>
                     <h3>Stage & Decoration Management</h3>
@@ -206,24 +214,18 @@
                 </div>
             </div>
             <div class="portfolio-card">
-                <img src="WhatsApp Image 2026-06-27 at 14.36.27.jpeg" alt="STEM and Computing Collaborations Team" style="width: 100%; height: 180px; object-fit: cover; object-position: center 25%;">
+                <!-- Custom STEM Image Link -->
+                <img src="WhatsApp Image 2026-06-27 at 14.36.27.jpeg" alt="STEM and Computing Collaborations Team" style="width: 100%; height: 210px; object-fit: cover; object-position: center 25%;">
                 <div class="portfolio-info">
                     <span class="tag">Extracurricular Activity</span>
                     <h3>STEM & Computing Collaborations</h3>
                     <p>Active project involvement including: Chemistry Sharing Session Facilitator (2024), Computer Science Unit STEM Poster Design, Mathematics Carnival participant, and Creative Independence Video production.</p>
                 </div>
             </div>
-            <div class="portfolio-card">
-                <div style="width: 100%; height: 180px; background: #334155; display: flex; align-items: center; justify-content: center; font-style: italic; color: var(--text-muted); padding: 10px; text-align: center;"><div><i class="fa-solid fa-globe" style="font-size: 2rem; color: var(--accent); opacity: 0.7; margin-bottom: 8px;"></i><br>[Web Workflow Mock]</div></div>
-                <div class="portfolio-info">
-                    <span class="tag">Freelance Systems</span>
-                    <h3>Local Vendor E-Commerce Platform</h3>
-                    <p>A freelance dynamic deployment engineered to allow seamless item search queries alongside clean, verified transaction data workflows.</p>
-                </div>
-            </div>
         </div>
     </section>
 
+    <!-- PAGE 5: PERSONAL QUALITIES & SKILLS -->
     <section id="skills">
         <h2 class="section-title">Personal Qualities & Skills</h2>
         <div class="skills-container">
@@ -265,6 +267,7 @@
         </div>
     </section>
 
+    <!-- PAGE 6: CONTACT & VERIFIED FORM -->
     <section id="contact">
         <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
         <div class="contact-wrapper">
@@ -279,10 +282,12 @@
         </div>
     </section>
 
+    <!-- ACCESSIBILITY FEATURE -->
     <div class="theme-switch" onclick="alert('Accessibility Feature Toggle triggered: Font scalability and high-contrast color mode applied.')" title="Toggle Accessibility Mode">
         <i class="fa-solid fa-eye"></i>
     </div>
 
+    <!-- CODE CONTROLLER SCRIPT -->
     <script>
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-links a');
