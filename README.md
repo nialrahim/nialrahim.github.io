@@ -21,40 +21,49 @@
             --accent-hover: #0EA5E9;
         }
 
-        body { background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; }
+        body { background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3, .nav-logo { font-family: 'Inter', sans-serif; font-weight: 800; }
 
-        /* FIXED NAVIGATION (HCI Consistency Standard) */
+        /* FIXED NAVIGATION (HCI Consistency Standard with Overflow Fix) */
         nav {
-            position: fixed; top: 0; width: 100%; height: 70px;
+            position: fixed; top: 0; left: 0; width: 100%; height: 70px;
             background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px);
             display: flex; justify-content: space-between; align-items: center;
-            padding: 0 10%; z-index: 1000; border-bottom: 1px solid #334155;
+            padding: 0 5%; z-index: 1000; border-bottom: 1px solid #334155;
         }
         .nav-logo { color: var(--accent); font-size: 1.5rem; text-decoration: none; }
         .nav-links { display: flex; list-style: none; gap: 25px; }
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-        /* PORTFOLIO PAGES/SECTIONS SETUP */
-        section { padding: 100px 10% 80px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+        /* PORTFOLIO PAGES/SECTIONS SETUP (Centered & Layout Constrained) */
+        section { 
+            padding: 120px 5% 80px 5%; 
+            min-height: 100vh; 
+            max-width: 1200px; 
+            margin: 0 auto; /* Centers the content block on wide viewports */
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+        }
         .section-title { font-size: 2.5rem; margin-bottom: 40px; color: var(--text-main); position: relative; }
         .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin-top: 10px; border-radius: 2px; }
 
-        /* PAGE 1: HOME SECTION */
-        #home { align-items: flex-start; text-align: left; }
+        /* PAGE 1: HOME SECTION (Perfectly Centered Alignment) */
+        #home { align-items: center; text-align: center; }
         #home h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; }
         #home h1 span { color: var(--accent); }
-        #home p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin-bottom: 35px; }
+        #home p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 35px auto; }
         .btn-cta { 
             padding: 12px 28px; background: var(--accent); color: var(--bg-primary); 
             text-decoration: none; font-weight: 600; border-radius: 6px; 
             transition: 0.3s; font-family: 'Inter', sans-serif; border: none; cursor: pointer;
+            display: inline-block;
         }
         .btn-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
 
         /* PAGE 2: PERSONAL & CONTACT DETAILS */
-        .about-container { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+        .about-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; width: 100%; }
         .profile-card { background: var(--bg-secondary); padding: 30px; border-radius: 12px; border: 1px solid #334155; text-align: center; }
         .profile-img-mock { width: 130px; height: 130px; background: #475569; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--accent); }
         .contact-list { text-align: left; margin-top: 20px; list-style: none; }
@@ -62,41 +71,48 @@
         .contact-list i { color: var(--accent); margin-right: 10px; width: 20px; }
 
         /* PAGE 3: ACADEMIC HISTORY (TIMELINE) */
-        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; width: 100%; }
         .timeline::after { content: ''; position: absolute; width: 4px; background: var(--bg-secondary); top: 0; bottom: 0; left: 31px; }
-        .timeline-item { padding: 10px 40px; position: relative; background: inherit; width: 100%; margin-bottom: 20px; }
-        .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; right: 234px; background-color: var(--bg-primary); border: 4px solid var(--accent); top: 15px; left: 25px; border-radius: 50%; z-index: 1; }
+        .timeline-item { padding: 10px 10px 10px 70px; position: relative; background: inherit; width: 100%; margin-bottom: 20px; }
+        .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; background-color: var(--bg-primary); border: 4px solid var(--accent); top: 25px; left: 25px; border-radius: 50%; z-index: 1; }
         .timeline-content { padding: 20px; background: var(--bg-secondary); position: relative; border-radius: 8px; border-left: 4px solid var(--accent); }
         .timeline-content h3 { color: var(--accent); font-size: 1.2rem; margin-bottom: 5px; }
         .timeline-content h4 { font-size: 1rem; margin-bottom: 10px; color: var(--text-main); }
         .timeline-content p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* PAGE 4: WORK PRODUCED (GRID) */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; width: 100%; }
         .portfolio-card { background: var(--bg-secondary); border-radius: 10px; overflow: hidden; border: 1px solid #334155; transition: 0.3s; }
         .portfolio-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .video-mock { width: 100%; height: 180px; background: #334155; display: flex; align-items: center; justify-content: center; font-style: italic; color: var(--text-muted); position: relative; }
+        .video-mock { width: 100%; height: 180px; background: #334155; display: flex; align-items: center; justify-content: center; font-style: italic; color: var(--text-muted); position: relative; padding: 10px; text-align: center; }
         .video-mock i { font-size: 2.5rem; color: var(--accent); opacity: 0.7; }
         .portfolio-info { padding: 20px; }
         .portfolio-info h3 { margin-bottom: 10px; font-size: 1.25rem; }
         .portfolio-info p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px; }
 
         /* PAGE 5: PERSONAL QUALITIES & SKILLS */
-        .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; width: 100%; }
         .skill-bar-group { margin-bottom: 20px; }
         .skill-label { display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: 500; font-size: 0.95rem; }
         .bar-bg { background: var(--bg-secondary); height: 10px; border-radius: 5px; overflow: hidden; }
         .bar-fill { background: var(--accent); height: 100%; border-radius: 5px; width: 0%; transition: width 1.5s ease-in-out; }
 
         /* PAGE 6: CONTACT & VALIDATED FORM */
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; width: 100%; }
         form { display: flex; flex-direction: column; gap: 15px; }
-        input, textarea { background: var(--bg-secondary); border: 1px solid #334155; padding: 15px; border-radius: 6px; color: white; font-size: 0.95rem; }
+        input, textarea { background: var(--bg-secondary); border: 1px solid #334155; padding: 15px; border-radius: 6px; color: white; font-size: 0.95rem; width: 100%; }
         input:focus, textarea:focus { outline: none; border-color: var(--accent); }
         .error-msg { color: #F87171; font-size: 0.85rem; display: none; margin-top: -10px; }
 
-        /* ADDED VALUE FEATURE: LIGHT/DARK TOGGLE MOCK */
+        /* ADDED VALUE FEATURE: ACCESSIBILITY TOGGLE BUTTON */
         .theme-switch { position: fixed; bottom: 25px; right: 25px; background: var(--bg-secondary); border: 1px solid #334155; padding: 12px; border-radius: 50%; cursor: pointer; color: var(--accent); box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1001; }
+        
+        /* RESPONSIVE DESIGN BREAKPOINT */
+        @media (max-width: 768px) {
+            #home h1 { font-size: 2.5rem; }
+            nav { padding: 0 20px; }
+            .nav-links { display: none; } /* Standard for quick simple view, toggleable via custom navbar extensions later */
+        }
     </style>
 </head>
 <body>
