@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUHAMMAD DANIAL BIN RAHIM PORTFOLIO</title>
-    <!-- Fonts and Icons -->
+    <title>Muhammad Danial | Cybersecurity Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -35,9 +34,9 @@
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-        /* PORTFOLIO PAGES/SECTIONS SETUP (Centered & Layout Constrained) */
+        /* PORTFOLIO PAGES/SECTIONS SETUP (Centered & Layout Constrained with Clipping Line Fix) */
         section { 
-            padding: 160px 5% 80px 5%;
+            padding: 160px 5% 80px 5%; /* Enhanced top padding from 120px to 160px fixes the navbar clipping line issue */
             min-height: 100vh; 
             max-width: 1200px; 
             margin: 0 auto; /* Centers the content block on wide viewports */
@@ -110,13 +109,12 @@
         @media (max-width: 768px) {
             #home h1 { font-size: 2.5rem; }
             nav { padding: 0 20px; }
-            .nav-links { display: none; } /* Standard for quick simple view, toggleable via custom navbar extensions later */
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- INTERACTIVE NAV -->
     <nav>
         <a href="#home" class="nav-logo"><i class="fa-solid fa-code"></i> Portfolio.</a>
         <ul class="nav-links">
@@ -129,37 +127,33 @@
         </ul>
     </nav>
 
-    <!-- PAGE 1: HOME -->
     <section id="home">
-        <h1>Building Digital Experiences<br>Driven by <span>HCI Principles.</span></h1>
-        <p>Hi, I am a Software Engineering Student at UTeM. I specialize in building fully accessible, user-friendly high-fidelity applications and freelance web systems.</p>
-        <a href="#work" class="btn-cta">Explore My Works <i class="fa-solid fa-arrow-right"></i></a>
+        <h1>Welcome to my portfolio,<br><span>Muhammad Danial Bin Rahim.</span></h1>
+        <p>Hi, I am a Cybersecurity Student at UTeM. I specialize in designing secure, user-friendly high-fidelity threat monitoring interfaces, identity management systems, and robust freelance web architectures.</p>
+        <a href="#work" class="btn-cta">Explore Cyber Projects <i class="fa-solid fa-terminal"></i></a>
     </section>
 
-    <!-- PAGE 2: PERSONAL & CONTACT DETAILS -->
     <section id="about">
         <h2 class="section-title">Personal Details</h2>
         <div class="about-container">
             <div class="profile-card">
                 <div class="profile-img-mock"><i class="fa-regular fa-user"></i></div>
-                <h3>Your Name Here</h3>
-                <p style="color: var(--accent); font-size: 0.9rem;">UTeM Undergraduate</p>
+                <h3>Muhammad Danial Bin Rahim</h3>
+                <p style="color: var(--accent); font-size: 0.9rem;">UTeM Cybersecurity Undergraduate</p>
                 <ul class="contact-list">
-                    <li><i class="fa-regular fa-envelope"></i> student@student.utem.edu.my</li>
-                    <li><i class="fa-solid fa-phone"></i> +60 1X-XXXXXXX</li>
-                    <li><i class="fa-brands fa-linkedin"></i> linkedin.com/in/username</li>
-                    <li><i class="fa-solid fa-location-dot"></i> Durian Tunggal, Melaka</li>
+                    <li><i class="fa-regular fa-envelope"></i> rahimdanial7@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +60 11-54054421</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Ampang, Selangor</li>
                 </ul>
             </div>
             <div>
                 <h3 style="margin-bottom: 15px;">Professional Biography</h3>
-                <p style="color: var(--text-muted); margin-bottom: 20px;">I am an enthusiastic technology student equipped with absolute foundations in Human-Computer Interaction, UI layout development, and responsive architectures. My design philosophy adheres directly to user ergonomics and interactive efficiency.</p>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">I am an enthusiastic technology student specializing in digital security, penetration testing, and secure UI design patterns. I bridge the gap between complex cryptographic security protocols and human-centered design to ensure systems are both uncompromised and highly usable.</p>
                 <button class="btn-cta" onclick="alert('Downloading CV / Academic Transcript Mock...')"><i class="fa-solid fa-download"></i> Download Academic Transcript</button>
             </div>
         </div>
     </section>
 
-    <!-- PAGE 3: ACADEMIC HISTORY -->
     <section id="education">
         <h2 class="section-title">Academic History</h2>
         <div class="timeline">
@@ -167,7 +161,7 @@
                 <div class="timeline-content">
                     <h3>2024 - Present</h3>
                     <h4>Universiti Teknikal Malaysia Melaka (UTeM)</h4>
-                    <p>Bachelor of Computer Science (Software Development). Focusing on core HCI fundamentals, Software Engineering, and Advanced Web Application Frameworks.</p>
+                    <p>Bachelor of Computer Science (Cybersecurity). Focusing on core HCI fundamentals, Secure Software Development, Network Defence, and Cryptography applications.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -180,7 +174,6 @@
         </div>
     </section>
 
-    <!-- PAGE 4: WORK PRODUCED -->
     <section id="work">
         <h2 class="section-title">Work Produced & Projects</h2>
         <div class="portfolio-grid">
@@ -188,111 +181,11 @@
                 <div class="video-mock"><i class="fa-solid fa-circle-play"></i>&nbsp;[Hover to Preview System GIF]</div>
                 <div class="portfolio-info">
                     <h3>UTeM Smart Room Booking System</h3>
-                    <p>Academic HCI Group Project built with interface standardizations following strict color hierarchies and navigation flows.</p>
+                    <p>Academic HCI Group Project built with interface standardizations following strict color hierarchies, access security, and navigation flows.</p>
                 </div>
             </div>
             <div class="portfolio-card">
                 <div class="video-mock"><i class="fa-solid fa-circle-play"></i>&nbsp;[Hover to Preview System GIF]</div>
                 <div class="portfolio-info">
                     <h3>Local Vendor E-Commerce Platform</h3>
-                    <p>A freelance dynamic deployment engineered to allow seamless item search queries and standard shopping flow architectures.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAGE 5: PERSONAL QUALITIES & SKILLS -->
-    <section id="skills">
-        <h2 class="section-title">Personal Qualities & Skills</h2>
-        <div class="skills-container">
-            <div>
-                <h3 style="margin-bottom:20px;">Technical Competencies</h3>
-                <div class="skill-bar-group">
-                    <div class="skill-label"><span>UI/UX Prototyping (Figma)</span><span>90%</span></div>
-                    <div class="bar-bg"><div class="bar-fill" data-width="90%"></div></div>
-                </div>
-                <div class="skill-bar-group">
-                    <div class="skill-label"><span>Frontend Engineering (HTML/CSS/JS)</span><span>85%</span></div>
-                    <div class="bar-bg"><div class="bar-fill" data-width="85%"></div></div>
-                </div>
-            </div>
-            <div>
-                <h3 style="margin-bottom:20px;">Professional Core Qualities</h3>
-                <div class="skill-bar-group">
-                    <div class="skill-label"><span>User Research & Information Architecture</span><span>95%</span></div>
-                    <div class="bar-bg"><div class="bar-fill" data-width="95%"></div></div>
-                </div>
-                <div class="skill-bar-group">
-                    <div class="skill-label"><span>Team Collaboration & Agile Communication</span><span>90%</span></div>
-                    <div class="bar-bg"><div class="bar-fill" data-width="90%"></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAGE 6: CONTACT & FORM VALIDATION -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-wrapper">
-            <div>
-                <h3 style="margin-bottom: 15px;">Let's Connect for Internships & Projects</h3>
-                <p style="color: var(--text-muted);">Have an internship opening, a freelance project opportunity, or want to review my code? Submit the form or hit me up through the official details listed.</p>
-            </div>
-            <form id="contactForm" onsubmit="event.preventDefault(); validateForm();">
-                <input type="text" id="name" placeholder="Your Full Name" required>
-                <input type="email" id="email" placeholder="Your Professional Email" required>
-                <div id="emailError" class="error-msg">Please enter a valid business email domain structure.</div>
-                <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
-                <button type="submit" class="btn-cta">Send Verified Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- UNIQUENESS / ADDED VALUE ACCESSIBILITY FEATURE -->
-    <div class="theme-switch" onclick="alert('Accessibility Feature Toggle triggered: Font scalability and high-contrast color mode applied.')" title="Toggle Accessibility Mode">
-        <i class="fa-solid fa-eye"></i>
-    </div>
-
-    <!-- CODE CONTROLLER SCRIPT (INTERACTION TRACKING) -->
-    <script>
-        // Highlighting current section links as user scrolls (HCI System Status Feedback)
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 120) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href').includes(current)) {
-                    a.classList.add('active');
-                }
-            });
-
-            // Trigger Skill bar filling animation on reach
-            if(current === 'skills') {
-                document.querySelectorAll('.bar-fill').forEach(bar => {
-                    bar.style.width = bar.getAttribute('data-width');
-                });
-            }
-        });
-
-        // Interactive Inline Client Form Validation
-        function validateForm() {
-            const email = document.getElementById('email').value;
-            const emailError = document.getElementById('emailError');
-            if (!email.includes('@') || !email.includes('.')) {
-                emailError.style.display = 'block';
-            } else {
-                emailError.style.display = 'none';
-                alert('Success! Your message was submitted securely according to strict operational standards.');
-            }
-        }
-    </script>
-</body>
-</html>
+                    <p>A
